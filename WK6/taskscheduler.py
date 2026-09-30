@@ -2,7 +2,7 @@ from collections import deque
 import time
 
 class TaskScheduler:
-    def _init_(self):
+    def __init__(self):
         self.task_queue = deque()
 
     def add_task(self, task_name):
