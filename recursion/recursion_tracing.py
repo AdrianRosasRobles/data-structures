@@ -5,4 +5,4 @@ def mystery(n):
         print("Start", n)
         mystery(n - 1)
         print("End")
-        mystery(3)
+mystery(3)
