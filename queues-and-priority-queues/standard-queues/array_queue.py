@@ -1,14 +1,14 @@
 class ArrayQueue:
-    def _init_(self):
+    def __init__(self):
         self._data = [None] * 10
         self._size = 0
         self._front = 0
 
-    def _len_(self):
+    def __len__(self):
         return self._size
     
     def is_empty(self):
-        return self._size ==0
+        return self._size == 0
 
     def first(self):
         if self.is_empty():
@@ -23,6 +23,7 @@ class ArrayQueue:
         self._data[self._front] = None
         self._front = (self._front + 1) % len(self._data)
         self._size -=1
+        return answer
 
     def enqueue(self, e):
         if self._size == len(self._data):
@@ -30,5 +31,5 @@ class ArrayQueue:
         
         avail = (self._front + self._size) % len(self._data)
         self._data[avail] = e
-        self._soze +=1
+        self._size +=1
     
